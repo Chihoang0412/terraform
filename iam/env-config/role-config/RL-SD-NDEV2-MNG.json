@@ -1,0 +1,22 @@
+{
+    "role-name": "RL-SD-NDEV2-MNG",
+    "instance-profile-name":"RL-SD-NDEV2-MNG",
+    "aws-managed-policies": [
+        "IAMFullAccess",
+        "AmazonSSMFullAccess",
+        "AmazonSSMAutomationRole"
+    ],
+    "my-policies-create-flg": false,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ssm.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "role-name": "RL-SD-NDEV21-BST-BAT",
+    "aws-managed-policies": [
+        "AmazonS3FullAccess",
+        "AmazonS3ReadOnlyAccess"
+    ],
+    "my-policies-create-flg": false,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "",
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ecs-tasks.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

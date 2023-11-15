@@ -1,0 +1,23 @@
+{
+    "role-name": "RL-SD-NDEV2-MNG-JKS",
+    "instance-profile-name":"RL-SD-NDEV2-MNG-JKS",
+    "aws-managed-policies": [
+        "AdministratorAccess",
+        "AmazonECS_FullAccess",
+        "AWSIoTDeviceDefenderPublishFindingsToSNSMitigationAction"
+    ],
+    "my-policies-create-flg": true,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "",
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ec2.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

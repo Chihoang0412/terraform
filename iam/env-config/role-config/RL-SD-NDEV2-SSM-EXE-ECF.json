@@ -1,0 +1,32 @@
+{
+    "role-name": "RL-SD-NDEV2-SSM-EXE-ECF",
+    "instance-profile-name":"RL-SD-NDEV2-SSM-EXE-ECF",
+    "aws-managed-policies": [
+        "AmazonRDSFullAccess",
+        "AmazonEC2ReadOnlyAccess",
+        "AmazonECS_FullAccess",
+        "ResourceGroupsandTagEditorReadOnlyAccess",
+        "AmazonSSMAutomationRole",
+        "AWSIoTDeviceDefenderPublishFindingsToSNSMitigationAction"
+    ],
+    "my-policies-create-flg": false,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": [
+                        "ssm.amazonaws.com",
+                        "rds.amazonaws.com",
+                        "ecs.amazonaws.com",
+                        "ec2.amazonaws.com",
+                        "events.amazonaws.com",
+                        "sns.amazonaws.com"
+                    ]
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

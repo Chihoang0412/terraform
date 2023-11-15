@@ -1,0 +1,7 @@
+{
+    "role-name": "SD_ADMIN",
+    "aws-managed-policies": [
+        "AdministratorAccess"
+    ],
+    "my-policies-create-flg": true
+}

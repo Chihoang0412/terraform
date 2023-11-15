@@ -1,0 +1,24 @@
+{
+    "role-name": "RL-SD-NDEV2-BTS-BAT",
+    "instance-profile-name": "IPF-SD-NDEV2-BTS-BAT",
+    "aws-managed-policies": [
+        "AmazonEC2ContainerRegistryFullAccess",
+        "AmazonS3FullAccess",
+        "ReadOnlyAccess",
+        "AmazonECS_FullAccess"
+    ],
+    "my-policies-create-flg": true,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "",
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ec2.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

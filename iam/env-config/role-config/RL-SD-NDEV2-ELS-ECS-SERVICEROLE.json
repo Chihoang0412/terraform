@@ -1,0 +1,19 @@
+{
+    "role-name": "RL-SD-NDEV2-ELS-ECS-SERVICEROLE",
+    "aws-managed-policies": [
+    ],
+    "my-policies-create-flg": true,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "",
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "events.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

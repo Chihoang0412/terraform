@@ -1,0 +1,13 @@
+{
+    "role-name": "NonGrid_develop",
+    "aws-managed-policies": [
+        "AmazonRDSFullAccess",
+        "ElasticLoadBalancingFullAccess",
+        "AmazonEC2ContainerRegistryFullAccess",
+        "AmazonS3FullAccess",
+        "CloudFrontFullAccess",
+        "AmazonECS_FullAccess",
+        "AWSWAFFullAccess"
+    ],
+    "my-policies-create-flg": true
+}

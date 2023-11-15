@@ -1,0 +1,69 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "VisualEditor0",
+			"Effect": "Allow",
+			"Action": "ec2:DescribeTags",
+			"Resource": "*"
+		},
+		{
+			"Sid": "VisualEditor1",
+			"Effect": "Allow",
+			"Action": [
+				"ecr:GetDownloadUrlForLayer",
+				"ecr:BatchGetImage",
+				"ecr:GetAuthorizationToken",
+				"ecr:BatchCheckLayerAvailability"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "VisualEditor2",
+			"Effect": "Allow",
+			"Action": [
+				"ecr:DescribeImageScanFindings",
+				"ecr:GetLifecyclePolicyPreview",
+				"ecr:GetDownloadUrlForLayer",
+				"ecr:GetAuthorizationToken",
+				"ecr:ListTagsForResource",
+				"ecr:UploadLayerPart",
+				"ecr:ListImages",
+				"ecr:PutImage",
+				"ecr:BatchGetImage",
+				"ecr:CompleteLayerUpload",
+				"ecr:DescribeImages",
+				"ecr:DescribeRepositories",
+				"ecr:InitiateLayerUpload",
+				"ecr:BatchCheckLayerAvailability",
+				"ecr:GetRepositoryPolicy",
+				"ecr:GetLifecyclePolicy"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "VisualEditor3",
+			"Effect": "Allow",
+			"Action": [
+				"ecs:Poll",
+				"ecs:DiscoverPollEndpoint",
+				"ecs:StartTelemetrySession",
+				"ecs:CreateCluster",
+				"ecs:UpdateContainerInstancesState",
+				"ecs:RegisterContainerInstance",
+				"ecs:Submit*",
+				"ecs:DeregisterContainerInstance"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "VisualEditor4",
+			"Effect": "Allow",
+			"Action": [
+				"logs:CreateLogStream",
+				"logs:PutLogEvents"
+			],
+			"Resource": "*"
+		}
+	]
+}

@@ -1,0 +1,29 @@
+{
+    "role-name": "RL-SD-NDEV20-ELS-ECS-MNG",
+    "instance-profile-name":"RL-SD-NDEV20-ELS-ECS-MNG",
+    "aws-managed-policies": [
+        "AutoScalingFullAccess",
+        "AmazonS3FullAccess",
+        "AWSCodeDeployFullAccess",
+        "CloudFrontFullAccess",
+        "AmazonS3ReadOnlyAccess",
+        "AWSCodeDeployRoleForECSLimited",
+        "AmazonECS_FullAccess",
+        "AmazonEC2ContainerServiceforEC2Role",
+        "AWSIoTDeviceDefenderPublishFindingsToSNSMitigationAction"        
+    ],
+    "my-policies-create-flg": true,
+    "trust-relationships": {
+        "Version": "2008-10-17",
+        "Statement": [
+            {
+                "Sid": "",
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ec2.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

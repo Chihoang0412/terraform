@@ -1,0 +1,19 @@
+{
+    "role-name": "RL-SD-NDEV2-ECS-AUTOSCALEROLE",
+    "aws-managed-policies": [
+        "AmazonEC2ContainerServiceforEC2Role"
+    ],
+    "my-policies-create-flg": false,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ec2.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

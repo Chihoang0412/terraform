@@ -1,0 +1,14 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:logs:us-east-1:371486134742:log-group:/aws/events/CWL-SVC-SD-NDEV2-FRW/serviceevents:*",
+            "Sid": "TrustEventsToStoreLogEvent"
+        }
+    ],
+    "Version": "2012-10-17"
+}

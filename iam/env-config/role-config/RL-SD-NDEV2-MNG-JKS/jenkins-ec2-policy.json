@@ -1,0 +1,48 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "ecs:RegisterTaskDefinition",
+                "ecs:DeregisterTaskDefinition",
+                "ecs:ListClusters",
+                "ecs:DescribeContainerInstances",
+                "ecs:ListTaskDefinitions",
+                "ecs:DescribeTaskDefinition",
+                "ecr:GetAuthorizationToken",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:GetRepositoryPolicy",
+                "ecr:DescribeRepositories",
+                "ecr:ListImages",
+                "ecr:DescribeImages",
+                "ecr:BatchGetImage"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Action": [
+                "ecs:StopTask",
+                "ecs:ListContainerInstances"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:ecs:us-east-1:371486134742:cluster/cicd-jenkins-slave-cluster"
+        },
+        {
+            "Action": [
+                "ecs:RunTask"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:ecs:us-east-1:371486134742:task-definition/*:*"
+        },
+        {
+            "Action": [
+                "ecs:StopTask",
+                "ecs:DescribeTasks"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:ecs:us-east-1:371486134742:task/*"
+        }
+    ]
+}

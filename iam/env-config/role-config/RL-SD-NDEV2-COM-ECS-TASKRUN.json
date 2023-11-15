@@ -1,0 +1,24 @@
+{
+    "role-name": "RL-SD-NDEV2-COM-ECS-TASKRUN",
+    "instance-profile-name":"RL-SD-NDEV2-COM-ECS-TASKRUN",
+    "aws-managed-policies": [
+        "AmazonS3FullAccess",
+        "CloudWatchFullAccess",
+        "AmazonS3ReadOnlyAccess",
+        "AmazonECSTaskExecutionRolePolicy",
+        "AmazonSSMReadOnlyAccess"
+    ],
+    "my-policies-create-flg": true,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ecs-tasks.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

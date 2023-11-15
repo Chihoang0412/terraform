@@ -1,0 +1,23 @@
+{
+    "role-name": "RL-SD-NDEV2-SSM-EXE",
+    "aws-managed-policies": [
+        "AmazonSSMAutomationRole"
+    ],
+    "my-policies-create-flg": false,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": [
+                        "ssm.amazonaws.com",
+                        "ec2.amazonaws.com",
+                        "events.amazonaws.com"
+                    ]
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

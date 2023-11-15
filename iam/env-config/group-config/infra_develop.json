@@ -1,0 +1,10 @@
+{
+    "role-name": "infra_develop",
+    "aws-managed-policies": [
+        "AmazonEC2ContainerServiceAutoscaleRole",
+        "PowerUserAccess",
+        "AmazonECS_FullAccess",
+        "IAMReadOnlyAccess"
+    ],
+    "my-policies-create-flg": true
+}

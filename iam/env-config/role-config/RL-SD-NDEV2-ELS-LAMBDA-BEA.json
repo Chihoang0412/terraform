@@ -1,0 +1,28 @@
+{
+    "role-name": "RL-SD-NDEV2-ELS-LAMBDA-BEA",
+    "aws-managed-policies": [
+        "AmazonAPIGatewayPushToCloudWatchLogs",
+        "AmazonS3ReadOnlyAccess",
+        "CloudWatchLogsFullAccess",
+        "AWSLambdaBasicExecutionRole",
+        "AWSLambdaVPCAccessExecutionRole",
+        "AWSLambda_FullAccess"
+    ],
+    "my-policies-create-flg": false,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "",
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": [
+                        "lambda.amazonaws.com",
+                        "apigateway.amazonaws.com"
+                    ]
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "role-name": "RL-SD-NDEV2-SSM-INSTANCE-SETUP",
+    "instance-profile-name":"RL-SD-NDEV2-SSM-INSTANCE-SETUP",
+    "aws-managed-policies": [
+        "AmazonSSMManagedInstanceCore"
+    ],
+    "my-policies-create-flg": false,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ec2.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "role-name": "RL-SD-NDEV2-DTD0-TO-INTEGRATION-DEV0",
+    "aws-managed-policies": [
+    ],
+    "my-policies-create-flg": true,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                    "AWS": "arn:aws:iam::464622532012:root"
+                },
+                "Action": "sts:AssumeRole",
+                "Condition": {
+                    "StringEquals": {
+                        "sts:ExternalId": "bdbb144b190144e985ad96502ed5fddf"
+                    }
+                }
+            }
+        ]
+    }
+}

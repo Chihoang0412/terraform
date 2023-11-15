@@ -1,0 +1,14 @@
+variable "vpc" {}
+variable "subnets" {}
+variable "security_groups" {}
+variable "igw" {}
+variable "eips" {}
+variable "natgw" {}
+variable "route_tables" {}
+variable "route_table_associations" {}
+variable "routes_igw" {}
+variable "routes_ngw" {}
+variable "create_route_nat_gateway" {}
+variable "create_route_internet_gateway" {}
+variable "create_ingress_rules" {}
+variable "create_egress_rules" {}

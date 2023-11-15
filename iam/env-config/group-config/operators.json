@@ -1,0 +1,15 @@
+{
+    "role-name": "operators",
+    "aws-managed-policies": [
+        "AmazonRDSFullAccess",
+        "IAMFullAccess",
+        "AmazonEC2ContainerRegistryFullAccess",
+        "AmazonS3FullAccess",
+        "CloudWatchFullAccess",
+        "AWSBatchFullAccess",
+        "AmazonECS_FullAccess",
+        "AWSStepFunctionsFullAccess",
+        "CloudWatchEventsFullAccess"
+    ],
+    "my-policies-create-flg": true
+}

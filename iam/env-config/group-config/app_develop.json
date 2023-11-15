@@ -1,0 +1,5 @@
+{
+    "role-name": "app_develop",
+    "aws-managed-policies": [],
+    "my-policies-create-flg": false
+}

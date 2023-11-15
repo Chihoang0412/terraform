@@ -1,0 +1,27 @@
+{
+    "role-name": "RL-SD-NDEV2-SSO-RESERVED",
+    "aws-managed-policies": [
+        "AdministratorAccess"
+    ],
+    "my-policies-create-flg": false,
+    "trust-relationships": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                    "Federated": "arn:aws:iam::371486134742:saml-provider/AWSSSO_b9e350e9e41e6ac9_DO_NOT_DELETE"
+                },
+                "Action": [
+                    "sts:AssumeRoleWithSAML",
+                    "sts:TagSession"
+                ],
+                "Condition": {
+                    "StringEquals": {
+                        "SAML:aud": "https://signin.aws.amazon.com/saml"
+                    }
+                }
+            }
+        ]
+    }
+}
